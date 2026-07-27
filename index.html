@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justin Roberts — Portfolio</title>
+<meta name="description" content="Justin Roberts — Mathematics & Computer Science student at Cornell University, software engineer at Wayfair, and builder of systems where correctness matters.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: oklch(0.972 0.006 85); color: oklch(0.24 0.012 60); font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: oklch(0.52 0.13 252); text-decoration: none; }
+  a:hover { color: oklch(0.42 0.14 252); }
+  ::selection { background: oklch(0.52 0.13 252 / 0.18); }
+  [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+  [data-reveal].is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    [data-reveal] { opacity: 1; transform: none; transition: none; }
+  }
+  .nav-link:hover { color: oklch(0.24 0.012 60) !important; }
+  .resume-link:hover { border-color: oklch(0.52 0.13 252) !important; color: oklch(0.52 0.13 252) !important; }
+  .btn-dark:hover { background: oklch(0.52 0.13 252) !important; }
+  .btn-outline:hover { border-color: oklch(0.24 0.012 60) !important; }
+  .project-card:hover { border-color: oklch(0.52 0.13 252 / 0.5) !important; }
+</style>
+</head>
+<body>
+<div style="max-width: 1120px; margin: 0 auto; padding: 0 32px;">
+
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 18px 0; margin-bottom: 8px; backdrop-filter: blur(8px); background: oklch(0.972 0.006 85 / 0.82); border-bottom: 1px solid oklch(0.24 0.012 60 / 0.08);">
+    <a href="#top" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.02em; color: oklch(0.24 0.012 60); font-weight: 500;">JR<span style="color: oklch(0.52 0.13 252);">/</span>portfolio</a>
+    <div style="display: flex; align-items: center; gap: 26px;">
+      <a class="nav-link" href="#work" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.42 0.012 60);">work</a>
+      <a class="nav-link" href="#projects" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.42 0.012 60);">projects</a>
+      <a class="nav-link" href="#skills" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.42 0.012 60);">skills</a>
+      <a class="nav-link" href="#contact" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.42 0.012 60);">contact</a>
+      <a class="resume-link" href="uploads/JustinRobertsResume.pdf" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; padding: 7px 14px; border: 1px solid oklch(0.24 0.012 60 / 0.35); border-radius: 999px; color: oklch(0.24 0.012 60); transition: border-color 0.2s ease, color 0.2s ease;">résumé ↓</a>
+    </div>
+  </nav>
+
+  <header id="top" style="padding: 96px 0 84px; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.06em; margin-bottom: 26px;">// mathematics · computer science · cornell '28</div>
+    <h1 data-reveal style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(52px, 9vw, 104px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 28px;">Justin Roberts</h1>
+    <p data-reveal style="font-size: clamp(19px, 2.4vw, 26px); line-height: 1.45; max-width: 720px; margin: 0 0 40px; color: oklch(0.34 0.012 60); text-wrap: pretty;">I build systems where correctness matters — from <span style="color: oklch(0.52 0.13 252);">image pipelines serving 10K+ uploads a day</span> to a Chrome extension backed by the Claude API and sublinear graph algorithms. Currently a software engineering intern at Wayfair.</p>
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+      <a class="btn-dark" href="mailto:jbr272@cornell.edu" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 11px 18px; background: oklch(0.24 0.012 60); color: oklch(0.972 0.006 85); border-radius: 999px; transition: background 0.2s ease;">jbr272@cornell.edu</a>
+      <a class="btn-outline" href="https://github.com/Justee21" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 11px 18px; border: 1px solid oklch(0.24 0.012 60 / 0.25); border-radius: 999px; color: oklch(0.3 0.012 60); transition: border-color 0.2s ease;">GitHub ↗</a>
+      <a class="btn-outline" href="https://www.linkedin.com/in/jusroberts" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 11px 18px; border: 1px solid oklch(0.24 0.012 60 / 0.25); border-radius: 999px; color: oklch(0.3 0.012 60); transition: border-color 0.2s ease;">LinkedIn ↗</a>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60); margin-left: 6px;">Ithaca, NY · (631) 759-1717</span>
+    </div>
+  </header>
+
+  <section style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">01 — about</div>
+    <div data-reveal>
+      <p style="font-size: clamp(18px, 2vw, 22px); line-height: 1.55; margin: 0 0 20px; max-width: 640px; text-wrap: pretty; color: oklch(0.3 0.012 60);">I'm a math and CS undergrad at Cornell who likes the parts of software where the details are unforgiving — databases, systems, and algorithms with provable guarantees.</p>
+      <p style="font-size: 17px; line-height: 1.6; margin: 0; max-width: 640px; text-wrap: pretty; color: oklch(0.4 0.012 60);">Across internships I've shipped production backends in Java/Spring Boot and JavaScript, cut PostgreSQL ingestion overhead by 80%, and designed cloud upload architectures. On the research side I developed sublinear graph algorithms with logarithmic query complexity. Outside of work I ship side projects — a Claude-powered Chrome extension, a Python trading engine, and low-level systems work.</p>
+    </div>
+  </section>
+
+  <section id="work" style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">02 — experience</div>
+    <div style="display: flex; flex-direction: column; gap: 4px;">
+
+      <div data-reveal style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 30px 0; border-top: 1px solid oklch(0.24 0.012 60 / 0.12);">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; margin: 0;">Software Engineer Intern <span style="color: oklch(0.52 0.13 252);">· Wayfair</span></h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60);">Jun 2026 — Present · Boston, MA</span>
+        </div>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; max-width: 700px;">
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Built an end-to-end image upload &amp; retrieval pipeline in Java/Spring Boot with GraphQL and GCS signed URLs — 10K+ uploads/day at sub-500 ms p95 latency.</li>
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Optimized PostgreSQL ingestion for 5M+ reviews/year, cutting redundant UPDATEs by 80% and downstream Airflow events by 60%.</li>
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Refactored a core Java review-summary parser, raising unit-test coverage from 70% to 90%+ and cutting staging parse errors by 40%.</li>
+        </ul>
+      </div>
+
+      <div data-reveal style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 30px 0; border-top: 1px solid oklch(0.24 0.012 60 / 0.12);">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; margin: 0;">Software Engineer Intern <span style="color: oklch(0.52 0.13 252);">· PlayToon</span></h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60);">Sep 2025 — May 2026 · Remote</span>
+        </div>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; max-width: 700px;">
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Redesigned a Prisma ORM schema in JavaScript, reducing data redundancy by 30%.</li>
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Authored an AWS S3 upload-pipeline proposal comparing presigned-URL vs. server-mediated flows — a path to 40% fewer failed uploads and 50% simpler IAM.</li>
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Overhauled developer docs with setup guides and architecture diagrams, cutting onboarding time by 30%.</li>
+        </ul>
+      </div>
+
+      <div data-reveal style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 30px 0; border-top: 1px solid oklch(0.24 0.012 60 / 0.12); border-bottom: 1px solid oklch(0.24 0.012 60 / 0.12);">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; margin: 0;">Independent Researcher <span style="color: oklch(0.52 0.13 252);">· Stony Brook University</span></h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60);">May 2025 — Oct 2025 · Stony Brook, NY</span>
+        </div>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; max-width: 700px;">
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Developed sublinear graph algorithms using global queries to detect isolated vertices — logarithmic query complexity, 75% fewer queries than prior work.</li>
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Validated performance in Python across 1,000+ synthetic graph datasets, 25% faster than legacy implementations.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" style="padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 40px;">03 — selected projects</div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+
+      <article data-reveal class="project-card" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
+        <div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">JavaScript · Express · Chrome Ext. API · Claude API</div>
+            <div style="display: flex; gap: 12px; flex-shrink: 0;">
+              <a href="https://github.com/Justee21" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">code ↗</a>
+              <a href="https://www.youtube.com/watch?v=6CepTk67Wjk" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">demo ↗</a>
+            </div>
+          </div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 34px; margin: 0 0 14px;">Buzzword Decoder</h3>
+          <p style="font-size: 16px; line-height: 1.55; margin: 0 0 20px; color: oklch(0.4 0.012 60); text-wrap: pretty;">A Chrome extension (Manifest V3) with a Node/Express proxy on Render, integrating Claude Haiku 4.5 to translate corporate jargon in real time — sub-2s end-to-end latency, a whitespace-normalization algorithm mapping collapsed text back to original DOM offsets, and an API key secured behind a token-authenticated proxy.</p>
+          <div style="display: flex; gap: 28px;">
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">&lt;2s</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">end-to-end latency</div></div>
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">~35%</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">phrase-match accuracy ↑</div></div>
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">0</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">CSS conflicts / 100+ sites</div></div>
+          </div>
+        </div>
+        <div style="aspect-ratio: 4/3; border-radius: 12px; background-image: repeating-linear-gradient(135deg, oklch(0.93 0.006 85) 0 10px, oklch(0.95 0.006 85) 10px 20px); border: 1px solid oklch(0.24 0.012 60 / 0.1); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">[ extension screenshot ]</span>
+        </div>
+      </article>
+
+      <article data-reveal class="project-card" style="background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 34px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.2s ease;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">Python · yfinance · Alpha Vantage · ccxt</div>
+          <a href="https://github.com/Justee21" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252); flex-shrink: 0;">code ↗</a>
+        </div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; margin: 0;">Trading Signal Engine</h3>
+        <p style="font-size: 15.5px; line-height: 1.55; margin: 0; color: oklch(0.4 0.012 60); text-wrap: pretty;">A Python engine implementing SMA, Bollinger Bands, and RSI indicators for automated buy/sell recommendations, fed by a market-data pipeline spanning equities and crypto.</p>
+        <div style="display: flex; gap: 20px; margin-top: auto;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.55 0.13 155);">+21.50% BTC</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.55 0.13 155);">+14.39% ETH</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.55 0.13 155);">+16.29% BNB</span>
+        </div>
+      </article>
+
+      <article data-reveal class="project-card" style="background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 34px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.2s ease;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">Python · Graph Theory · Research</div>
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 27px; margin: 0;">Sublinear Graph Algorithms</h3>
+        <p style="font-size: 15.5px; line-height: 1.55; margin: 0; color: oklch(0.4 0.012 60); text-wrap: pretty;">Isolated-vertex detection using global queries, achieving logarithmic query complexity — a 75% reduction over prior approaches — validated on 1,000+ synthetic graphs with 25% faster runtime.</p>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60); margin-top: auto;">Stony Brook University</div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills" style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">04 — toolkit</div>
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+
+      <div data-reveal style="display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60); padding-top: 4px;">Languages</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Java</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Python</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">C</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">JavaScript</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">SQL</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">GraphQL</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Assembly</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Julia</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">HTML/CSS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">PHP</span>
+        </div>
+      </div>
+
+      <div data-reveal style="display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60); padding-top: 4px;">Frameworks</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Spring Boot</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">React</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Node.js</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Express</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">FastAPI</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Django</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">PyTorch</span>
+        </div>
+      </div>
+
+      <div data-reveal style="display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60); padding-top: 4px;">Tools</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">AWS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">GCS</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Docker</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Kubernetes</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Git</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">GitHub</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">DataDog</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Buildkite</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Chrome Ext. APIs</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Anthropic API</span>
+        </div>
+      </div>
+
+      <div data-reveal style="display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60); padding-top: 4px;">Libraries</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">pandas</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">NumPy</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Matplotlib</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">ccxt</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">yfinance</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 6px 13px; border: 1px solid oklch(0.24 0.012 60 / 0.18); border-radius: 8px; color: oklch(0.32 0.012 60); background: oklch(0.985 0.004 85);">Alpha Vantage</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact" style="padding: 100px 0 120px;">
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 26px;">05 — get in touch</div>
+    <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 32px; max-width: 800px;">Open to Summer 2027 SWE internships.</h2>
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 12px;">
+      <a class="btn-dark" href="mailto:jbr272@cornell.edu" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 13px 22px; background: oklch(0.24 0.012 60); color: oklch(0.972 0.006 85); border-radius: 999px; transition: background 0.2s ease;">jbr272@cornell.edu →</a>
+      <a class="resume-link" href="uploads/JustinRobertsResume.pdf" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 13px 22px; border: 1px solid oklch(0.24 0.012 60 / 0.3); border-radius: 999px; color: oklch(0.3 0.012 60); transition: border-color 0.2s ease, color 0.2s ease;">Download résumé ↓</a>
+    </div>
+    <div style="margin-top: 80px; padding-top: 24px; border-top: 1px solid oklch(0.24 0.012 60 / 0.1); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.55 0.012 60);">
+      <span>© 2026 Justin Roberts</span>
+      <span>Ithaca, NY · built from scratch</span>
+    </div>
+  </footer>
+
+</div>
+<script>
+  (function () {
+    var els = document.querySelectorAll("[data-reveal]");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
