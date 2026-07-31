@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Justin Roberts — Portfolio</title>
-<meta name="description" content="Justin Roberts — Mathematics & Computer Science student at Cornell University, software engineer at Wayfair, and builder of systems where correctness matters.">
+<meta name="description" content="Justin Roberts — Cornell math & CS student, Wayfair SWE intern, and LLM enjoyer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
   <header id="top" style="padding: 96px 0 84px; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
     <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.06em; margin-bottom: 26px;">// mathematics · computer science · cornell '28</div>
     <h1 data-reveal style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(52px, 9vw, 104px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 28px;">Justin Roberts</h1>
-    <p data-reveal style="font-size: clamp(19px, 2.4vw, 26px); line-height: 1.45; max-width: 720px; margin: 0 0 40px; color: oklch(0.34 0.012 60); text-wrap: pretty;">I like owning systems end to end — from <span style="color: oklch(0.52 0.13 252);">an image pipeline serving 10K+ uploads a day</span> to a Chrome extension backed by the Claude API. I'm always looking for the next hard problem to learn from. Currently a software engineering intern at Wayfair.</p>
+    <p data-reveal style="font-size: clamp(19px, 2.4vw, 26px); line-height: 1.45; max-width: 720px; margin: 0 0 40px; color: oklch(0.34 0.012 60); text-wrap: pretty;">Hi! I'm a SWE intern at Wayfair who's a little too obsessed with LLMs (cough cough — <a href="#buzzword-decoder">my Chrome extension</a>, <a href="#top">this website</a>, <a href="uploads/JustinRobertsResume.pdf" target="_blank">my resume</a>, etc.). If I'm not coding I'm probably rock climbing, playing chess, attempting to cook, or taking a nap. Still figuring out summer 2027 plans — feel free to reach out!</p>
     <div data-reveal style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
       <a class="btn-dark" href="mailto:jbr272@cornell.edu" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 11px 18px; background: oklch(0.24 0.012 60); color: oklch(0.972 0.006 85); border-radius: 999px; transition: background 0.2s ease;">jbr272@cornell.edu</a>
       <a class="btn-outline" href="https://github.com/Justee21" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 11px 18px; border: 1px solid oklch(0.24 0.012 60 / 0.25); border-radius: 999px; color: oklch(0.3 0.012 60); transition: border-color 0.2s ease;">GitHub ↗</a>
@@ -54,16 +54,8 @@
     </div>
   </header>
 
-  <section style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
-    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">01 — about</div>
-    <div data-reveal>
-      <p style="font-size: clamp(18px, 2vw, 22px); line-height: 1.55; margin: 0 0 20px; max-width: 640px; text-wrap: pretty; color: oklch(0.3 0.012 60);">I'm a math and CS undergrad at Cornell interested in foundational work — databases, systems, and algorithms with provable guarantees.</p>
-      <p style="font-size: 17px; line-height: 1.6; margin: 0; max-width: 640px; text-wrap: pretty; color: oklch(0.4 0.012 60);">Across internships I've shipped production backends in Java/Spring Boot and JavaScript, cut PostgreSQL ingestion overhead by 80%, and designed cloud upload architectures. Outside of work I ship side projects — a Claude-powered Chrome extension, a Python trading engine, and low-level systems work. On the research side I developed sublinear graph algorithms with logarithmic query complexity.</p>
-    </div>
-  </section>
-
   <section id="work" style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
-    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">02 — experience</div>
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">01 — experience</div>
     <div style="display: flex; flex-direction: column; gap: 4px;">
 
       <div data-reveal style="display: grid; grid-template-columns: 1fr; gap: 14px; padding: 30px 0; border-top: 1px solid oklch(0.24 0.012 60 / 0.12);">
@@ -72,6 +64,7 @@
           <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.5 0.012 60);">Jun 2026 — Present · Boston, MA</span>
         </div>
         <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; max-width: 700px;">
+          <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Developed a Gemini-based review moderation system on a BigQuery → Vertex AI pipeline with Airflow DAGs — ~1K reviews/day at 89% precision, 98% recall against human moderator decisions.</li>
           <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Built an end-to-end image upload &amp; retrieval pipeline in Java/Spring Boot with GraphQL and GCS signed URLs — 10K+ uploads/day at sub-500 ms p95 latency.</li>
           <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Optimized PostgreSQL ingestion for 5M+ reviews/year, cutting redundant UPDATEs by 80% and downstream Airflow events by 60%.</li>
           <li style="font-size: 16px; line-height: 1.55; color: oklch(0.38 0.012 60);">Refactored a core Java review-summary parser, raising unit-test coverage from 70% to 90%+ and cutting staging parse errors by 40%.</li>
@@ -105,10 +98,10 @@
   </section>
 
   <section id="projects" style="padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
-    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 40px;">03 — selected projects</div>
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 40px;">02 — selected projects</div>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
 
-      <article data-reveal class="project-card" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
+      <article id="buzzword-decoder" data-reveal class="project-card" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
         <div>
           <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">JavaScript · Express · Chrome Ext. API · Claude API</div>
@@ -159,7 +152,7 @@
   </section>
 
   <section id="skills" style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
-    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">04 — toolkit</div>
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em;">03 — toolkit</div>
     <div style="display: flex; flex-direction: column; gap: 28px;">
 
       <div data-reveal style="display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start;">
@@ -223,7 +216,7 @@
   </section>
 
   <footer id="contact" style="padding: 100px 0 120px;">
-    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 26px;">05 — get in touch</div>
+    <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 26px;">04 — get in touch</div>
     <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 400; font-size: clamp(40px, 6vw, 72px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 32px; max-width: 800px;">Open to Summer 2027 SWE internships.</h2>
     <div data-reveal style="display: flex; flex-wrap: wrap; gap: 12px;">
       <a class="btn-dark" href="mailto:jbr272@cornell.edu" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; padding: 13px 22px; background: oklch(0.24 0.012 60); color: oklch(0.972 0.006 85); border-radius: 999px; transition: background 0.2s ease;">jbr272@cornell.edu →</a>
@@ -231,7 +224,7 @@
     </div>
     <div style="margin-top: 80px; padding-top: 24px; border-top: 1px solid oklch(0.24 0.012 60 / 0.1); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.55 0.012 60);">
       <span>© 2026 Justin Roberts</span>
-      <span>Ithaca, NY · built from scratch</span>
+      <span>Ithaca, NY · built with Claude, powered by my opinions</span>
     </div>
   </footer>
 
