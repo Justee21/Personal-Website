@@ -26,6 +26,20 @@
   .btn-dark:hover { background: oklch(0.52 0.13 252) !important; }
   .btn-outline:hover { border-color: oklch(0.24 0.012 60) !important; }
   .project-card:hover { border-color: oklch(0.52 0.13 252 / 0.5) !important; }
+  #adaptkit, #adaptkit-demo { scroll-margin-top: 90px; }
+  @media (max-width: 760px) {
+    nav { gap: 16px; }
+    nav > a { flex-shrink: 0; }
+    nav > div { min-width: 0; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+    nav > div::-webkit-scrollbar { display: none; }
+    #work, #skills { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+    #work > div, #skills > div { min-width: 0; }
+    .project-grid { grid-template-columns: minmax(0, 1fr) !important; }
+    .project-grid > article { min-width: 0; }
+    .featured-project { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; padding: 24px !important; }
+    .featured-project > div { min-width: 0; }
+    .project-header, .project-links { flex-wrap: wrap; }
+  }
 </style>
 </head>
 <body>
@@ -110,13 +124,42 @@
 
   <section id="projects" style="padding: 84px 0; border-bottom: 1px solid oklch(0.24 0.012 60 / 0.1);">
     <div data-reveal style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.52 0.13 252); letter-spacing: 0.04em; margin-bottom: 40px;">02 — selected projects</div>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+    <div class="project-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
 
-      <article id="buzzword-decoder" data-reveal class="project-card" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
+      <article id="adaptkit" data-reveal class="project-card featured-project" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
+        <div style="min-width: 0;">
+          <div class="project-header" style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">Python · SQLite · Thompson Sampling</div>
+            <div class="project-links" style="display: flex; gap: 12px; flex-shrink: 0;">
+              <a href="https://github.com/Justee21/AdaptKit" target="_blank" rel="noopener noreferrer" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">code ↗</a>
+              <a href="https://pypi.org/project/adaptkit/" target="_blank" rel="noopener noreferrer" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">PyPI ↗</a>
+              <a href="#adaptkit-demo" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">demo ↓</a>
+            </div>
+          </div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 34px; margin: 0 0 14px;">AdaptKit</h3>
+          <p style="font-size: 16px; line-height: 1.55; margin: 0 0 20px; color: oklch(0.4 0.012 60); text-wrap: pretty;">An open-source Python SDK that helps agents adapt their response style to each user and context. Developers define the behaviors and map them to prompts; AdaptKit chooses an action and learns from feedback.</p>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 10px;">
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">95.4%</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">feedback detection</div></div>
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">100%</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">applied behavior precision</div></div>
+            <div><div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: oklch(0.55 0.13 155); font-weight: 500;">0</div><div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.5 0.012 60);">harmful policy updates</div></div>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: oklch(0.5 0.012 60); margin-bottom: 18px;">gpt-5.6-terra · 80 synthetic holdout cases · 3 runs · <a href="https://github.com/Justee21/AdaptKit/blob/main/artifacts/real_evaluator_summary.json" target="_blank" rel="noopener noreferrer" style="color: oklch(0.52 0.13 252);">benchmark details ↗</a></div>
+          <code style="display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 13px; padding: 10px 14px; border: 1px solid oklch(0.24 0.012 60 / 0.16); border-radius: 8px; background: oklch(0.96 0.006 85); color: oklch(0.28 0.012 60);">pip install adaptkit</code>
+        </div>
+        <div style="min-width: 0;">
+          <video id="adaptkit-demo" controls playsinline preload="none" poster="uploads/adaptkit-demo-preview.png" aria-label="AdaptKit demo showing developer integration and user feedback changing agent behavior" style="display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid oklch(0.24 0.012 60 / 0.1); background: oklch(0.24 0.012 60);">
+            <source src="https://github.com/user-attachments/assets/7c8e9be1-e4de-43cf-9ff2-9517017bf8d8" type="video/mp4">
+            <source src="uploads/adaptkit-demo-45s.mp4" type="video/mp4">
+            <a href="https://github.com/user-attachments/assets/7c8e9be1-e4de-43cf-9ff2-9517017bf8d8">Watch the AdaptKit demo</a>
+          </video>
+        </div>
+      </article>
+
+      <article id="buzzword-decoder" data-reveal class="project-card featured-project" style="grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; background: oklch(0.985 0.004 85); border: 1px solid oklch(0.24 0.012 60 / 0.12); border-radius: 18px; padding: 40px; transition: border-color 0.2s ease;">
         <div>
-          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
+          <div class="project-header" style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px;">
             <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.012 60);">JavaScript · Express · Chrome Ext. API · Claude API</div>
-            <div style="display: flex; gap: 12px; flex-shrink: 0;">
+            <div class="project-links" style="display: flex; gap: 12px; flex-shrink: 0;">
               <a href="https://github.com/Justee21" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">code ↗</a>
               <a href="https://www.youtube.com/watch?v=6CepTk67Wjk" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">demo ↗</a>
               <a href="https://chromewebstore.google.com/detail/fpdcccodcjnledjbnebigaofpdodmdlm" target="_blank" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.13 252);">try it out ↗</a>
