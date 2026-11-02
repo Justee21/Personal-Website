@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justin Roberts: Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+a[data-icon]:hover{text-decoration:none;opacity:0.6}
+a[data-line]{text-decoration:underline;text-decoration-color:#b8b8b8;text-decoration-thickness:1px;text-underline-offset:4px}
+a[data-line]:hover{text-decoration-color:#000000}
+button{font:inherit}
+button[data-btn]:hover{text-decoration:underline;text-underline-offset:4px}
+textarea:focus{outline:2px solid #000000;outline-offset:2px}
+</style>
+</head>
+<body>
+<div style="position: relative; min-height: 100vh; display: flex; flex-direction: column; background: #ffffff; color: #000000; font-family: 'Genera', 'Hanken Grotesk', system-ui, sans-serif; font-weight: 400; font-size: 15px; line-height: 1.6">
+
+
+<header style="position: relative; width: min(640px, calc(100% - 48px)); margin: 0 auto; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0 28px; padding: 14px 0 0">
+<a href="index.html" style="display: inline-block; padding: 12px 0">Justin Roberts</a>
+<nav aria-label="Primary" style="display: flex; flex-wrap: wrap; gap: 0 32px">
+<a href="projects.html" aria-current="page" style="display: inline-block; padding: 12px 0; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px">Projects</a>
+<a href="blog.html" style="display: inline-block; padding: 12px 0">Blog</a>
+<a href="uploads/JustinRobertsResume.pdf" target="_blank" rel="noopener" style="display: inline-block; padding: 12px 0">Resume</a>
+</nav>
+</header>
+
+<main style="position: relative; flex: 1; width: min(640px, calc(100% - 48px)); margin: 0 auto; padding: clamp(16px, 9vh, 80px) 0 56px; box-sizing: border-box">
+<div style="max-width: 100%">
+
+<h1 style="margin: 0 0 40px; font-size: 15px; line-height: 1.6; font-weight: 400">Projects</h1>
+
+<div style="display: flex; flex-direction: column; gap: 52px">
+
+<article>
+<h2 style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 400">bedtime-LM</h2>
+<div style="color: #6b6b6b; margin-bottom: 8px">PyTorch · TinyStories</div>
+<p style="margin: 0 0 18px; color: #333333">A small mixture-of-experts transformer I trained from scratch with my friend <a data-line="1" href="https://ericyenn.github.io" target="_blank" rel="noopener">Eric Yen</a>. It finishes stories rather than answering questions, so give it the start of one.</p>
+
+<div>
+<textarea id="story-prompt" aria-label="Start of a story" rows="5" style="width: 100%; box-sizing: border-box; resize: vertical; padding: 8px 10px; background: #ffffff; border: 1px solid #d0d0cc; border-radius: 4px; color: #000000; font-family: inherit; font-weight: 400; font-size: 15px; line-height: 1.55"></textarea>
+<div style="margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 20px">
+<button type="button" id="story-go" data-btn="1" style="min-height: 32px; padding: 4px 0; border: 0; background: none; color: #000000; font-size: 15px; font-weight: 400; cursor: pointer; text-decoration: underline; text-underline-offset: 4px">Continue the story</button>
+<button type="button" id="story-stop" data-btn="1" hidden style="min-height: 32px; padding: 4px 0; border: 0; background: none; color: #000000; font-size: 15px; font-weight: 400; cursor: pointer">Stop</button>
+<button type="button" id="story-reset" data-btn="1" style="min-height: 32px; padding: 4px 0; border: 0; background: none; color: #000000; font-size: 15px; font-weight: 400; cursor: pointer; color: #6b6b6b">Reset</button>
+</div>
+<div id="story-result" hidden style="margin-top: 14px">
+<div style="white-space: pre-wrap"><span id="story-lead" style="color: #6b6b6b"></span><span id="story-out"></span></div>
+<div id="story-bar" hidden style="margin-top: 10px; height: 3px; background: #e5e5e1; overflow: hidden"><div id="story-fill" style="height: 100%; width: 0; background: #000000"></div></div>
+<p id="story-caption" aria-live="polite" style="margin: 10px 0 0; color: #6b6b6b"></p>
+</div>
+</div>
+
+<div style="margin-top: 12px"><a data-line="1" href="https://github.com/Justee21/bedtime-LM" target="_blank" rel="noopener">Code</a></div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; gap: 14px 22px">
+<div style="flex: 0 0 120px; width: 120px; height: 90px; border-radius: 4px; overflow: hidden; border: 1px solid #e5e5e1; background: #f1f3f4">
+<img src="uploads/adaptkit-demo-preview.png" alt="AdaptKit demo preview" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block">
+</div>
+<div style="flex: 1 1 260px; min-width: 0">
+<h2 style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 400">AdaptKit</h2>
+<div style="color: #6b6b6b; margin-bottom: 6px">Python</div>
+<p style="margin: 0 0 6px; color: #333333">A Python SDK that helps agents adapt their response style to each user, learning from feedback.</p>
+<div><a data-line="1" href="https://github.com/Justee21/AdaptKit" target="_blank" rel="noopener">Code</a> · <a data-line="1" href="https://pypi.org/project/adaptkit/" target="_blank" rel="noopener">PyPI</a> · <a data-line="1" href="https://github.com/user-attachments/assets/7c8e9be1-e4de-43cf-9ff2-9517017bf8d8" target="_blank" rel="noopener">Demo</a> · pip install adaptkit</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; gap: 14px 22px">
+<div style="flex: 0 0 120px; width: 120px; height: 90px; border-radius: 4px; overflow: hidden; border: 1px solid #e5e5e1; background: #f1f3f4">
+<img src="uploads/buzzword-decoder-screenshot.png" alt="Buzzword Decoder tooltip translating a corporate phrase into plain English" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block">
+</div>
+<div style="flex: 1 1 260px; min-width: 0">
+<h2 style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 400">Buzzword Decoder</h2>
+<div style="color: #6b6b6b; margin-bottom: 6px">JavaScript · Chrome extension</div>
+<p style="margin: 0 0 6px; color: #333333">A Chrome extension that translates corporate jargon into plain English as you read.</p>
+<div><a data-line="1" href="https://github.com/Justee21/buzzword-decoder" target="_blank" rel="noopener">Code</a> · <a data-line="1" href="https://www.youtube.com/watch?v=6CepTk67Wjk" target="_blank" rel="noopener">Demo</a> · <a data-line="1" href="https://chromewebstore.google.com/detail/fpdcccodcjnledjbnebigaofpdodmdlm" target="_blank" rel="noopener">Chrome Web Store</a></div>
+</div>
+</article>
+</div>
+</div>
+</main>
+
+<footer style="position: relative; width: min(640px, calc(100% - 48px)); margin: 0 auto; box-sizing: border-box; padding: 0 0 24px; text-align: center">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 14px">
+<span>email: jbr272 [at] cornell [dot] edu</span>
+<span style="display: inline-flex">
+<a data-icon="1" href="https://www.linkedin.com/in/jusroberts" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a data-icon="1" href="https://x.com/justee921" target="_blank" rel="noopener" aria-label="X" title="X" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a data-icon="1" href="https://github.com/Justee21" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+</span>
+</div>
+</footer>
+
+</div>
+<script src="bedtime-lm/bedtime-lm.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+var DEFAULT = "Tom and Jane are friends. One day, Jane goes to Tom’s house. Tom has a big pot of soup. He wants to share it with Jane. “Jane, do you want some soup?” Tom asks. Yes, please. It looks yummy, Jane says. Tom pours some soup into two bowls. He gives one bowl to Jane. Jane takes a spoonful of soup, but then she makes a face. The soup is";
+var SAMPLE = "very hot and crunchy. Jane puts the soup in her pot.\nTom is angry. He says, \"This soup is too hot and sticky. I don't like soup.\" He pulls a spoon from his pot. It is bitter. He spills the soup on the floor. The soup is bitter and it makes it bitter.\nJane sees how sad Tom is. She says, \"Tom, are you okay? You are still my friend. You scared me.\" She gets a big towel of soup. She puts a bitter soup on the stove. She says, \"I'm sorry, Tom. I won't do it again. I will help you.\"";
+var $ = function (id) { return document.getElementById(id); };
+var box = $('story-prompt'), go = $('story-go'), stopBtn = $('story-stop'), resetBtn = $('story-reset');
+var result = $('story-result'), lead = $('story-lead'), out = $('story-out'), bar = $('story-bar'), fill = $('story-fill'), caption = $('story-caption');
+box.value = DEFAULT;
+
+var lm = null, ctl = null, running = false, stopped = false, firstTimer = null;
+var queue = '', shown = '', iv = null, onDrain = null;
+
+function push(t) { queue += t; if (!iv) iv = setInterval(tick, 22); }
+function tick() {
+  if (!queue) { clearInterval(iv); iv = null; var d = onDrain; onDrain = null; if (d) d(); return; }
+  var n = Math.max(3, Math.ceil(queue.length / 40));
+  shown += queue.slice(0, n); queue = queue.slice(n); out.textContent = shown;
+}
+function drained() { return new Promise(function (res) { if (!iv && !queue) res(); else onDrain = res; }); }
+function stopTyping() { clearInterval(iv); iv = null; queue = ''; var d = onDrain; onDrain = null; if (d) d(); }
+function setBar(pct) { if (pct < 0) { bar.hidden = true; } else { bar.hidden = false; fill.style.width = pct.toFixed(1) + '%'; } }
+function say(t) { caption.textContent = t; }
+function makeLead(p) { return '…' + p.trim().split(/\s+/).slice(-3).join(' '); }
+function mb(n) { return (n / 1e6).toFixed(1); }
+
+async function runLive(prompt) {
+  setBar(-1); say('Getting the model ready…');
+  if (!window.BedtimeLM || !window.BedtimeLM.supported()) throw new Error('unsupported');
+  if (!lm) lm = new window.BedtimeLM();
+  await lm.load(function (p) {
+    if (p.stage === 'download') { setBar(p.total ? Math.min(100, p.loaded / p.total * 100) : 0); say('Downloading the model, first visit only: ' + mb(p.loaded) + ' / ' + mb(p.total) + ' MB'); }
+    else if (p.stage === 'cached') { setBar(100); say('Loading the model from your browser’s cache…'); }
+    else if (p.stage === 'compile') { setBar(100); say('Starting the model…'); }
+  });
+  setBar(-1); say('Writing…');
+  var got = false;
+  ctl = new AbortController();
+  firstTimer = setTimeout(function () { if (!got) ctl.abort(); }, 30000);
+  var r;
+  try {
+    r = await lm.generate(prompt, { maxNewTokens: 120, temperature: 0.7, signal: ctl.signal, onToken: function (t) { got = true; push(t); } });
+  } finally { clearTimeout(firstTimer); }
+  await drained();
+  if (r.stopped === 'cancelled' && !got && !stopped) throw new Error('timeout');
+  var done = r.tokenIds.length + ' tokens in ' + (r.ms / 1000).toFixed(1) + ' s';
+  say(r.stopped === 'cancelled' ? 'Stopped. ' + done + '.' : 'Written live by the model, in your browser: ' + done + ' (temperature 0.7).');
+}
+async function runSaved(isDefault) {
+  stopTyping(); shown = ''; out.textContent = ''; lead.textContent = makeLead(DEFAULT); setBar(-1);
+  say(isDefault ? 'A saved run from my notebook (temperature 0.7).' : 'The model could not run here, so this is the saved run for the Tom and Jane prompt.');
+  push(' ' + SAMPLE); await drained();
+}
+
+go.addEventListener('click', async function () {
+  if (running) return;
+  var text = box.value.trim();
+  result.hidden = false;
+  if (!text) { lead.textContent = ''; out.textContent = ''; setBar(-1); say('Type the start of a story first.'); return; }
+  running = true; stopped = false; go.disabled = true; stopBtn.hidden = false;
+  stopTyping(); shown = ''; out.textContent = ''; lead.textContent = makeLead(text); say('');
+  try { await runLive(text); }
+  catch (err) {
+    console.error(err);
+    if (shown) say('Something went wrong part-way through.');
+    else await runSaved(box.value === DEFAULT);
+  } finally { running = false; go.disabled = false; stopBtn.hidden = true; setBar(-1); }
+});
+stopBtn.addEventListener('click', function () { stopped = true; if (ctl) ctl.abort(); if (lm) lm.cancel(); if (!lm) stopTyping(); });
+resetBtn.addEventListener('click', function () {
+  stopped = true; if (ctl) ctl.abort(); if (lm) lm.cancel(); stopTyping(); shown = '';
+  box.value = DEFAULT; out.textContent = ''; lead.textContent = ''; say(''); setBar(-1); result.hidden = true;
+});
+});
+</script>
+</body>
+</html>
