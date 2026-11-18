@@ -39,9 +39,9 @@ textarea:focus{outline:2px solid #000000;outline-offset:2px}
 <article id="chess">
 <h2 style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 400">Chess bot</h2>
 <div style="color: #6b6b6b; margin-bottom: 8px">Maia 3 · PyTorch</div>
-<p style="margin: 0 0 12px; color: #333333">I fine-tuned Maia 3 on my own chess games to make a bot that plays like me.</p>
-<button type="button" id="chess-play" aria-expanded="false" aria-controls="chess-frame" style="min-height: 40px; padding: 4px 0; border: 0; background: none; color: #000000; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px">Play Justin</button>
-<iframe id="chess-frame" hidden title="Play chess against Justin's bot" style="width: 100%; max-width: 480px; height: 680px; border: 0; display: block"></iframe>
+<p style="margin: 0 0 12px; color: #333333">I fine-tuned <a data-line="1" href="https://arxiv.org/abs/2605.19091" target="_blank" rel="noopener">Maia 3</a> on my own chess games to make a bot that plays like me.</p>
+<button type="button" id="chess-play" aria-expanded="false" aria-controls="chess-frame" style="min-height: 40px; padding: 4px 0; border: 0; background: none; color: #000000; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px">Play Me</button>
+<iframe id="chess-frame" hidden title="Play against my chess bot" style="width: 100%; max-width: 480px; height: 680px; border: 0; display: block"></iframe>
 <p style="margin: 8px 0 0; color: #6b6b6b; font-size: 12px">Runs on your device. First play downloads about 106 MB; later games can use your browser’s cache.</p>
 <div style="margin-top: 12px"><a data-line="1" href="https://github.com/Justee21/chess-bot" target="_blank" rel="noopener">Code &amp; model</a></div>
 </article>
@@ -188,12 +188,20 @@ resetBtn.addEventListener('click', function () {
   var frame = document.getElementById('chess-frame');
   button.addEventListener('click', function () {
     frame.hidden = false;
-    frame.src = 'https://justee21.github.io/chess-bot/web/index.html?embed=1&autostart=1';
+    if (!frame.getAttribute('src')) frame.src = 'https://justee21.github.io/chess-bot/web/index.html?embed=1&autostart=1&v=2';
     button.setAttribute('aria-expanded', 'true');
     button.hidden = true;
-  }, { once: true });
+  });
   window.addEventListener('message', function (event) {
-    if (event.origin !== location.origin || event.source !== frame.contentWindow || !event.data || event.data.type !== 'justin-chess-size') return;
+    if (event.origin !== location.origin || event.source !== frame.contentWindow || !event.data || !event.data.type) return;
+    if (event.data.type === 'justin-chess-close') {
+      frame.hidden = true;
+      button.hidden = false;
+      button.setAttribute('aria-expanded', 'false');
+      button.focus();
+      return;
+    }
+    if (event.data.type !== 'justin-chess-size' || frame.hidden) return;
     var height = Number(event.data.height);
     if (Number.isFinite(height) && height > 0 && height < 2000) frame.style.height = height + 'px';
   });
